@@ -1,0 +1,131 @@
+@media screen and (max-width: 1400px) {
+    #profile {
+      height: 83vh;
+      margin-bottom: 6rem;
+    }
+    .about-containers {
+      flex-wrap: wrap;
+      gap: 1rem; /* Added gap for better spacing */
+    }
+    #contact,
+    #projects {
+      height: fit-content;
+      padding: 2rem 0; /* Added padding for better spacing */
+    }
+  }
+  
+  @media screen and (max-width: 1200px) {
+    #desktop-nav {
+      display: none;
+    }
+    #hamburger-nav {
+      display: flex;
+      justify-content: space-between; /* Improved alignment */
+      padding: 1rem; /* Added padding for better spacing */
+    }
+    #experience,
+    .experience-details-container {
+      margin-top: 2rem;
+    }
+    #profile,
+    .section-container {
+      display: block;
+      text-align: center; /* Center align text */
+    }
+    .arrow {
+      display: none;
+    }
+    section,
+    .section-container {
+      height: fit-content;
+      margin: 0 5%; /* Adjusted margin for better spacing */
+    }
+    .section__pic-container {
+      width: 275px;
+      height: 275px;
+      margin: 0 auto 2rem;
+    }
+    .about-containers {
+      margin-top: 0;
+      gap: 1rem; /* Added gap for better spacing */
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    #contact,
+    footer {
+      height: auto; /* Changed to auto for better flexibility */
+      padding: 2rem 0; /* Added padding for better spacing */
+    }
+    #profile {
+      height: auto; /* Changed to auto for better flexibility */
+      margin-bottom: 0;
+      padding: 2rem 0; /* Added padding for better spacing */
+    }
+    article {
+      font-size: 1rem;
+      text-align: center; /* Center align text */
+    }
+    footer nav {
+      height: fit-content;
+      margin-bottom: 2rem;
+    }
+    .about-containers,
+    .contact-info-upper-container,
+    .btn-container {
+      flex-wrap: wrap;
+      gap: 1rem; /* Added gap for better spacing */
+    }
+    .contact-info-container {
+      margin: 0;
+      flex-direction: column; /* Stack contact info vertically */
+      align-items: center; /* Center align items */
+    }
+    .contact-info-container p,
+    .nav-links li a {
+      font-size: 1rem;
+    }
+    .experience-sub-title {
+      font-size: 1.25rem;
+      text-align: center; /* Center align text */
+    }
+    .logo {
+      font-size: 1.5rem;
+    }
+    .nav-links {
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+    }
+    .section__pic-container {
+      width: 80%; /* Adjusted width for better responsiveness */
+      height: auto; /* Changed to auto for better flexibility */
+      max-width: 275px; /* Added max-width for better control */
+      margin: 0 auto 2rem;
+    }
+    .section__text__p2 {
+      font-size: 1.25rem;
+    }
+    .title {
+      font-size: 2rem;
+      text-align: center; /* Center align text */
+    }
+    .text-container {
+      text-align: justify;
+      padding: 0 1rem; /* Added padding for better readability */
+    }
+  }
+  
+  /* Additional Media Query for Extra Small Screens */
+  @media screen and (max-width: 400px) {
+    .section__pic-container {
+      width: 90%; /* Adjusted width for very small screens */
+    }
+    .btn {
+      width: 100%; /* Full-width buttons for better usability */
+      margin: 0.5rem 0; /* Added margin for better spacing */
+    }
+    .contact-info-container p {
+      font-size: 0.9rem; /* Adjusted font size for very small screens */
+    }
+  }
