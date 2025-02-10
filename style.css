@@ -5,6 +5,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 body {
@@ -26,20 +27,18 @@ a,
   transition: all 300ms ease;
 }
 
-/* DESKTOP NAV */
-
-nav,
-.nav-links {
-  display: flex;
-}
+/* NAV */
 
 nav {
-  justify-content: space-evenly;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   height: 17vh;
+  padding: 0 2rem; /* Add some padding */
 }
 
 .nav-links {
+  display: flex;
   gap: 2rem;
   list-style: none;
   font-size: 1.5rem;
@@ -48,7 +47,6 @@ nav {
 a {
   color: black;
   text-decoration: none;
-  text-decoration-color: white;
 }
 
 a:hover {
@@ -69,12 +67,12 @@ a:hover {
 /* HAMBURGER MENU */
 
 #hamburger-nav {
-  display: none;
+  display: none; /* Hidden by default on larger screens */
 }
 
 .hamburger-menu {
   position: relative;
-  display: inline-block;
+  display: inline-block; /* Visible on smaller screens */
 }
 
 .hamburger-icon {
@@ -85,15 +83,18 @@ a:hover {
   width: 30px;
   cursor: pointer;
 }
-.system img{
+
+.system img {
   border-radius: 40%;
+  width: 50px; /* Adjust as needed */
+  height: 50px; /* Adjust as needed */
 }
 
 .hamburger-icon span {
   width: 100%;
   height: 2px;
   background-color: black;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-links {
@@ -101,10 +102,11 @@ a:hover {
   top: 100%;
   right: 0;
   background-color: white;
-  width: fit-content;
+  width: fit-content; /* Or 100% for full width */
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: 100; /* Ensure it's on top */
 }
 
 .menu-links a {
@@ -114,7 +116,6 @@ a:hover {
   font-size: 1.5rem;
   color: black;
   text-decoration: none;
-  transition: all 0.3 ease-in-out;
 }
 
 .menu-links li {
@@ -137,30 +138,20 @@ a:hover {
   transform: rotate(-45deg) translate(10px, -5px);
 }
 
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
-.hamburger-icon span:first-child {
-  opacity: 1;
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
-}
 
 /* SECTIONS */
 
 section {
-  padding-top: 4vh;
+  padding: 4vh 10rem;
   height: 96vh;
-  margin: 0 10rem;
+  margin: 0; /* Remove default margin */
   box-sizing: border-box;
   min-height: fit-content;
 }
 
 .section-container {
   display: flex;
+  gap: 4rem;
 }
 
 /* PROFILE SECTION */
@@ -177,6 +168,11 @@ section {
   height: 400px;
   width: 400px;
   margin: auto 0;
+}
+
+/* Make the first image more round */
+#profile .section__pic-container:first-of-type img {
+  border-radius: 50%;
 }
 
 .section__text {
@@ -260,9 +256,6 @@ section {
   border: rgb(255, 255, 255) 0.1rem solid;
 }
 
-.btn-container {
-  gap: 1rem;
-}
 
 /* ABOUT SECTION */
 
@@ -271,6 +264,7 @@ section {
 }
 
 .about-containers {
+  display: flex;
   gap: 2rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
@@ -281,10 +275,6 @@ section {
   flex-direction: column;
 }
 
-.about-containers,
-.about-details-container {
-  display: flex;
-}
 
 .about-pic {
   border-radius: 2rem;
@@ -306,16 +296,7 @@ section {
   text-align: center;
 }
 
-.section-container {
-  gap: 4rem;
-  height: 80%;
-}
 
-.section__pic-container {
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
-}
 
 /* EXPERIENCE SECTION */
 
@@ -348,7 +329,7 @@ section {
 article {
   display: flex;
   width: 10rem;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   gap: 0.5rem;
 }
 
@@ -363,78 +344,4 @@ article .icon {
 }
 
 .color-container {
-  border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
-}
-
-.project-img {
-  border-radius: 2rem;
-  width: 90%;
-  height: 90%;
-}
-
-.project-title {
-  margin: 1rem;
-  color: black;
-}
-
-.project-btn {
-  color: black;
-  border-color: rgb(163, 163, 163);
-}
-
-/* CONTACT */
-
-#contact {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: 70vh;
-}
-
-.contact-info-upper-container {
-  display: flex;
-  justify-content: center;
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
-  margin: 2rem auto;
-  padding: 0.5rem;
-}
-
-.contact-info-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin: 1rem;
-}
-
-.contact-info-container p {
-  font-size: larger;
-}
-
-.contact-icon {
-  cursor: default;
-}
-
-.email-icon {
-  height: 2.5rem;
-}
-
-/* FOOTER SECTION */
-
-footer {
-  height: 26vh;
-  margin: 0 1rem;
-}
-
-footer p {
-  text-align: center;
-}
-
-/* Make the first image more round */
-#profile .section__pic-container:first-of-type img {
-  border-radius: 50%; /* Makes the first image circular */
-}
+  border-color: rgb(163,
